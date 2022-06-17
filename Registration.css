@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman';
+    background: url("https://static.vecteezy.com/system/resources/previews/000/093/696/original/vector-yellow-abstract-background.jpg");  
+}
+#progress{
+    position: relative;
+    top: 30px;
+   left: 10%;
+}
+.pipebutton{
+    width: 10.5%;
+    height: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 50%;
+    color: white;
+}
+#myForms{
+    position: relative;
+}
+.card{
+    position: absolute;
+    top:50px;
+    width: 90%;
+    height: 500px;
+    left: 5%;
+    color: white;
+    font-size: 14px;
+}
+#card1{
+     display: block; 
+}
+#card2{
+     display: none; 
+}
+#card3{
+    height: 660px;
+    display: none;    
+}
+.personal{
+    position: relative;
+    top: 15px;
+    text-align: center;
+    font-weight: 800;
+}
+.form{
+    position: relative;
+    top: 40px;
+}
+.form-data{
+    /* left: 8%;
+    right: 8%; */
+    margin: auto;
+}
+input[type="radio"]{
+    height: 12px;
+    width: 12px; 
+}
+.radio{
+   margin-right: 10px;
+}
+
+.next1{
+  width: 100%;
+}
+.muted{
+  opacity: 0;
+}
+.preview{
+    width: 100%;
+}
+.save{
+    position: relative;
+    top: -30px;
+    width: 100%;
+}
+.table{
+    position: relative;
+    top: 20px;
+}
+.personald{
+    position: relative;
+    top: 18px;
+    text-align: center;
+    font-weight: 400;
+}
+#terms
+{
+  position: relative;
+  left: 25%;
+  bottom: 40px;
+}

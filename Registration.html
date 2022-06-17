@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Registration.css">
+</head>
+<body onload="getTab()">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="progress" class="col col-md-4">
+                <button id="but1" onclick="nextFunc()" class="btn btn-dark pipebutton">
+                    1
+                </button>
+            </div>
+            <div onclick="previewFunc()" id="progress" class="col col-md-4">
+                <button id="but2" class="btn btn-dark pipebutton">
+                    2
+                </button>
+            </div>
+            <div onclick="saveandSubmit()" id="progress" class="col col-md-4">
+                <button id="but3" class="btn btn-dark pipebutton">
+                    P
+                </button>
+            </div>
+        </div>
+        <div id="myForms" class="row">
+            <div id="card1" class="card bg-dark">
+                <div class="card-body">
+                    <h4 class="personal">PERSONAL DETAILS</h4>
+                    <form class="form" action="" method="POST">
+                        <div class="row">
+                            <div class="col col-md-5 form-data">
+                                <div class="form-group">
+                                    <h6 id="helpId1" class="form-text">Candidate's Name</h6>
+                                    <input type="text" class="form-control" name="cname" id="cname"
+                                        aria-describedby="helpId1" placeholder="Enter your name">
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId3" class="form-text">Candidate's Gender</h6>
+                                    <label class="radio" for="">Male
+                                        <input type="radio" class="form-control" name="cname" value="Male" id="gender1"
+                                            aria-describedby="helpId"></label>
+                                    <label class="radio" for="">Female <input type="radio" class="form-control"
+                                            name="cname" value="Female" id="gender2" aria-describedby="helpId"> </label>
+                                    <label class="radio" for=""> Other <input type="radio" class="form-control"
+                                            name="cname" value="Other" id="gender3" aria-describedby="helpId"> </label>
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId4" class="form-text">Candidate's DOB</h6>
+                                    <input type="date" class="form-control" name="cdob" id="cdob"
+                                        aria-describedby="helpId4">
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId6" class="form-text">Candidate's E-mail</h6>
+                                    <input type="email" class="form-control" name="cemail" id="cemail"
+                                        aria-describedby="helpId6" placeholder="Enter your e-mail">
+                                </div>
+                            </div>
+                            <div class="col col-md-5 form-data">
+                                <div class="form-group">
+                                    <h6 id="helpId2" class="form-text">Candidate's Age</h6>
+                                    <input type="number" class="form-control" name="cage" id="cage"
+                                        aria-describedby="helpId2" placeholder="Enter your age">
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId" class="form-text">Candidate's District</h6>
+                                    <select class="form-control" name="cdistrict" id="cdistrict"
+                                        aria-describedby="helpId">
+                                        <option value="Calicut">Calicut</option>
+                                        <option value="Malappuram">Malappuram</option>
+                                        <option value="Kollam">Kollam</option>
+                                        <option value="Ernakulam">Ernakulam</option>
+                                        <option value="Idukki">Idukki</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId5" class="form-text">Candidate's Mobile</h6>
+                                    <input type="number" class="form-control" name="cmobile" id="cmobile"
+                                        aria-describedby="helpId5" placeholder="Enter your mobile">
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId" class="form-text muted">Candidate's Mobile</h6>
+                                    <button onclick="validateForm1()" type="button" class="btn btn-danger next1"
+                                        aria-describedby="helpId">NEXT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="card2" class="card bg-dark">
+                <div class="card-body">
+                    <h4 class="personal">ACADEMIC DETAILS</h4>
+                    <form class="form" action="">
+                        <div class="row">
+                            <div class="col col-md-4 form-data">
+                                <div class="form-group">
+                                    <h6 id="helpId7" class="form-text">10th Institute</h6>
+                                    <input type="text" class="form-control" name="10thi" id="10thi"
+                                        aria-describedby="helpId7" placeholder="10th Institute Name">
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId8" class="form-text">12th Institute</h6>
+                                    <input type="text" class="form-control" name="12thi" id="12thi"
+                                        aria-describedby="helpId8" placeholder="12th Institute Name">
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId9" class="form-text">UG Institute</h6>
+                                    <input type="text" class="form-control" name="ugi" id="ugi"
+                                        aria-describedby="helpId9" placeholder="UG Institute Name">
+                                </div>
+                            </div>
+                            <div class="col col-md-4 form-data">
+                                <div class="form-group">
+                                    <h6 id="helpId10" class="form-text">Register Number</h6>
+                                    <input type="number" class="form-control" name="10thr" id="10thr"
+                                        aria-describedby="helpId10" placeholder="10th Register Number">
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId11" class="form-text">Register Number</h6>
+                                    <input type="number" class="form-control" name="12thr" id="12thr"
+                                        aria-describedby="helpId11" placeholder="12th Register Number">
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId12" class="form-text">Register Number</h6>
+                                    <input type="number" class="form-control" name="ugr" id="ugr"
+                                        aria-describedby="helpId12" placeholder="UG Register Number">
+                                </div>
+                            </div>
+                            <div class="col col-md-2 form-data">
+                                <div class="form-group">
+                                    <h6 id="helpId13" class="form-text">% of Mark</h6>
+                                    <input type="number" class="form-control" name="10thm" id="10thm"
+                                        aria-describedby="helpId13" placeholder="10th Mark in %">
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId14" class="form-text">% of Mark</h6>
+                                    <input type="number" class="form-control" name="12thm" id="12thm"
+                                        aria-describedby="helpId14" placeholder="12th Mark in %">
+                                </div>
+                                <div class="form-group">
+                                    <h6 id="helpId15" class="form-text">% of Mark</h6>
+                                    <input type="number" class="form-control" name="ugm" id="ugm"
+                                        aria-describedby="helpId15" placeholder="UG Mark in %">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col col-md-10 form-data">
+                                <div class="form-group">
+                                    <h6 id="helpId" class="form-text muted">Candidate's Mobile</h6>
+                                    <button onclick="validateForm2()" type="button" class="btn btn-danger preview"
+                                        aria-describedby="helpId">PREVIEW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div id="card3" class="card bg-secondary">
+                <div class="card-body">
+                    <h4 class="personal">PREVIEW</h4>
+                    <h6 class="personald">PERSONAL DETAILS</h6>
+                    <table class="table table-striped table-dark">
+                        <tbody>
+                            <tr>
+                                <td>Candidate's Name:</td>
+                                <td id="dname"></td>
+                                <td>Candidate's Age:</td>
+                                <td id="dage"></td>
+                            </tr>
+                            <tr>
+                                <td>Candidate's Gender:</td>
+                                <td id="dgender"></td>
+                                <td>Candidate's District:</td>
+                                <td id="ddistrict"></td>
+                            </tr>
+                            <tr>
+                                <td>Candidate's DOB:</td>
+                                <td id="ddob"></td>
+                                <td>Candidate's Mobile:</td>
+                                <td id="dmobile"></td>
+                            </tr>
+                            <tr>
+                                <td>Candidate's E-mail:</td>
+                                <td id="demail"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h6 class="personald">ACADEMIC DETAILS</h6>
+                    <table class="table table-striped table-dark">
+                        <tbody>
+                            <tr>
+                                <th colspan="6">10th</th>
+                            </tr>
+                            <tr>
+                                <td>Institute:</td>
+                                <td id="d10i"></td>
+                                <td>Register Number:</td>
+                                <td id="d10r"></td>
+                                <td>% of Mark:</td>
+                                <td id="d10m"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="6">12th</th>
+                            </tr>
+                            <tr>
+                                <td>Institute:</td>
+                                <td id="d12i"></td>
+                                <td>Register Number:</td>
+                                <td id="d12r"></td>
+                                <td>% of Mark:</td>
+                                <td id="d12m"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="6">UG</th>
+                            </tr>
+                            <tr>
+                                <td>Institute:</td>
+                                <td id="dugi"></td>
+                                <td>Register Number:</td>
+                                <td id="dugr"></td>
+                                <td>% of Mark:</td>
+                                <td id="dugm"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <form class="form" action="">
+                        <div id="terms">
+                            <input id="c" value="pineapple" onclick="enableButton()" type="checkbox"> I hereby declare
+                            that all the information
+                            given above is true to the best of
+                            my knowledge and belief
+                        </div>
+                        <div class="row">
+                            <div class="col col-md-10 form-data">
+                                <div class="form-group">
+                                    <div id="displaydata"> </div>
+                                    <h6 id="helpId" class="form-text muted">Candidate's Mobile</h6>
+                                    <button disabled onclick="final()" id="helpIdb" type="submit"
+                                        class="btn btn-danger save" aria-describedby="helpId"> <span
+                                            class="spinner-border spinner-border-sm"></span> SAVE &
+                                        SUBMIT <span class="spinner-border spinner-border-sm"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Registration.js"></script>
+</body>
+</html>
